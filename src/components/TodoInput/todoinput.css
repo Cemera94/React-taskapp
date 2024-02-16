@@ -1,0 +1,35 @@
+.input_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.todoinput {
+	display: flex;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.todoinput .textInput {
+	padding: 15px;
+	border: none;
+	background: transparent;
+	outline: none;
+	font-size: 16px;
+}
+
+.todoinput button {
+	border: none;
+	background-color: #e1b382;
+	color: #12343b;
+	padding: 0 10px;
+	font-size: 16px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.todoinput button:hover {
+	background-color: #ac7c49;
+}
