@@ -1,15 +1,11 @@
 import "./todotask.css";
 
-function TodoTask() {
+function TodoTask({ tasks }) {
 	return (
 		<div className="todotask_container">
-			<div className="todo_item">
-				<h3>URADI DOMACI ZADATAK</h3>
-				<div className="buttons">
-					<button>Remove</button>
-					<button>Edit</button>
-				</div>
-			</div>
+			{tasks.length > 0 ? tasks.map((task, index) => {
+				return <div className="todo_item" key={index}>{task}</div>
+			}) : <div className="todo_item">Nemate nijedan zadatak</div>}
 		</div>
 	);
 }
