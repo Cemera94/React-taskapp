@@ -7,12 +7,13 @@ function App() {
 	const [tasks, setTasks] = useState([]);
 
 
+
 	return (
 		<div className="container">
 			<div className="wrapper">
 				<h1 className="title">TODO APP</h1>
 				<TodoInput tasks={tasks} setTasks={setTasks} />
-				<TodoTask tasks={tasks} />
+				<TodoTask tasks={tasks} setTasks={setTasks} />
 			</div>
 		</div>
 	);

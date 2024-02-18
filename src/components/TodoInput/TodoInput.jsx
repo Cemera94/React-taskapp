@@ -3,7 +3,7 @@ import "./todoinput.css";
 
 function TodoInput({ tasks, setTasks }) {
 
-	const [newTask, setNewTask] = useState('');
+	const [newTask, setNewTask] = useState("");
 
 
 	const taskHandler = (event) => {
@@ -11,11 +11,16 @@ function TodoInput({ tasks, setTasks }) {
 	}
 
 	const addTask = () => {
-		setTasks([
-			...tasks,
-			newTask
-		]);
-		setNewTask("");
+		if (newTask) {
+			setTasks([
+				...tasks,
+				{
+					title: newTask,
+					id: new Date().getTime()
+				}
+			]);
+			setNewTask("");
+		}
 	}
 
 	return (
